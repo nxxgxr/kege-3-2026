@@ -6,7 +6,6 @@ cnt = 0
 for val_tuple in product(printable[:16], repeat=4):
     val = ''.join(val_tuple)
 
-    # Проверяем все пары
     for i in range(len(val) - 1):
         if val[i] == val[i + 1]:
             break
