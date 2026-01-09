@@ -7,4 +7,4 @@ while sum_9:
         cnt_9+=1
     sum_9 //=9
 
-print(cny)
+print(cnt)
