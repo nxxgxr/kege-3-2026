@@ -4,7 +4,7 @@ for N in range(1,100000):
         R = '1' + R[:-2] + '10'
     else:
         R = '10' + R[2:] + '1'
-    R = int(R,2)
+    r=int(r,2)
     if R > 202:
         print(N)
         break
