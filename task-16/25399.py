@@ -8,7 +8,7 @@ def f(n):
 @lru_cache(None)
 def g(n):
     if n > 303728: return n-15
-    return g(n+8)/2 - 109
+    return g(n+8)//2 - 109
 
 for i in range(304000,0,-1):
     g(i)
