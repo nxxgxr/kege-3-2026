@@ -1,7 +1,4 @@
-def f(start,end,cnt=0):
-    cnt+=1
-    if start==end:return 1
-    if start>end:return 0
-    return f(start+10,end,cnt) + f(start-5,end,cnt)
-
-print(f(1,10,15))
+dots={1}
+for i in range(15):
+    dots={x+10 for x in dots} | {x-5 for x in dots}
+print(len(dots))
