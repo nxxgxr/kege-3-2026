@@ -1,5 +1,4 @@
 from itertools import *
-
 def f(x,y,z,w):
     return not (x <= y) or (z==w) or z
 
