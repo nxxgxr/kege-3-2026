@@ -6,7 +6,7 @@ def f(num):
         num //= 39
     return res[::-1]
 ans=[]
-for x in range(1,9430):
+for x in range(1,9431):
     sum=39**483 + 39**235 -x
     num=f(sum)
     ans+=[num.count('0')]

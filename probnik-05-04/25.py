@@ -11,8 +11,6 @@ def f(num):
         return min(ans)
     return 0
 cnt=0
-
-
 for i in range(1_350_050,10**10):
     bla = f(i)
     if bla:
