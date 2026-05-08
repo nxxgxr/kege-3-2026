@@ -4,9 +4,9 @@
 #     data=file.readline()
 # for val in product('QRS',repeat=2):
 #     val=''.join(val)
-#     data=data.replace(val,' ')
+#     data=data.replace(val,'1 1')
 # data=data.split()
-# print(len(max(data,key=len)) + 2)
+# print(len(max(data,key=len)))
 
 
 #перебор
@@ -24,7 +24,7 @@
 #     max_ans = max(max_ans, cnt)
 # print(max_ans)
 
-re
+#re
 with open(r'../files/24_7600.txt') as file:
     data=file.readline()
 

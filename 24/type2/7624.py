@@ -1,5 +1,5 @@
 #замена
-from itertools import *
+# from itertools import *
 # with open(r'../files/24_7624.txt') as file:
 #     data=file.readline()
 #
