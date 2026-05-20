@@ -1,4 +1,3 @@
-
 from re import finditer
 
 with open(r'../files/24_17641.txt') as file:
