@@ -1,28 +1,26 @@
 with open(r'../files/24_18239.txt') as file:
     data = file.readline().strip()
-alph = '123456789'
-dlina = l = ans = 0
-cnt = 0
-
-for r in range(1, len(data) - 1):
-    while l < len(data) and data[l] == '-':
-        l += 1
-    if r + 1 < len(data) and data[r] == '-' and data[r + 1] == '-':
-        l = r + 2
-        cnt = 0
-        continue
-    if r + 1 < len(data) and data[r] == '-' and data[r + 1] in alph:
-        if r > l and data[l] != '-':
-            cnt = eval(data[l:r])
-    while cnt < -20000 and l < r:
-        l += 1
-        while l < len(data) and data[l] == '-':
+k = -20000
+a = data.split('-')
+i = [i for i in range(len(a)) if a[i] == '']
+data = [a[i[x] + 1:i[x + 1]] for x in range(len(i) - 1)]
+data = [x for x in data if x]
+ans = []
+for b in data:
+    l = s = 0
+    ln = len(b[0])
+    sum = int(b[0])
+    for r in range(1, len(b)):
+        s += int(b[r])
+        sum = int(b[l]) - s
+        ln += 1 + len(b[r])
+        while sum <= k and l < r:
+            ln -= len(b[l]) + 1
+            s -= int(b[l + 1])
             l += 1
-        if r > l and data[l] != '-':
-            cnt = eval(data[l:r])
-    if cnt > -20000 and data[l] != '-':
-        dlina = r - l + 1
-        ans = max(ans, dlina)
+            if l <= r:
+                sum = int(b[l]) - s
+        if sum > k:
+            ans.append(ln)
 
-    print(ans)
-print(ans)
+print(max(ans))
