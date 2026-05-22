@@ -13,4 +13,9 @@ for r in range(len(data)-2):
             ans=max(ans,r-l+3)
             l=r
 print(ans)
-
+from re import finditer
+G = r'[AE]'
+S = r'[BCDFGH]'
+pattern = rf'(?<={S}{S}{G}).+?(?={S + S + G})'
+matches=[match.group() for match in finditer(pattern,data)]
+print(len(max(matches,key=len)) + 6)

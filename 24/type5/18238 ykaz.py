@@ -18,8 +18,7 @@ for b in data:
             ln -= len(b[l]) + 1
             s -= int(b[l + 1])
             l += 1
-            if l <= r:
-                sum = int(b[l]) - s
+            sum = int(b[l]) - s
         if sum > k:
             ans.append(ln)
 
