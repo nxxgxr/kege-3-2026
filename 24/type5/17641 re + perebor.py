@@ -23,5 +23,4 @@ for match in matches:
                 if eval(new_match) == 0:
                     ans = max(ans, len(new_match))
                     break
-
 print(ans)
