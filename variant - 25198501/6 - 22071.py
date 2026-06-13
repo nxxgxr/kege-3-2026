@@ -4,8 +4,8 @@ m=30
 tracer(False)
 
 fd(30*m)
-lt(60)
 fd(24*m)
+lt(60)
 rt(240)
 
 fd(54*m)
